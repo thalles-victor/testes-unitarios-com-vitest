@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  test_database:
+    container_name: test_database
+    image: postgres
+
+    volumes:
+      - ".:/postgres/data"
+
+    ports:
+      - 5432:5432
+
+    environment:
+      - POSTGRES_DB=database
+      - POSTGRES_PASSWORD=senha
+      - POSTGRES_USER=thalles
+
